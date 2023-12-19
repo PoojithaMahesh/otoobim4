@@ -54,11 +54,20 @@ public void findPerson(int id) {
 	}
 }
 
-
-
-
-
-
+public void deletePerson(int id) {
+	EntityManager entityManager=getEntityManager();
+	Person dbPerson=entityManager.find(Person.class, id);
+	
+	if(dbPerson!=null) {
+//		id is present  
+		EntityTransaction entityTransaction=entityManager.getTransaction();
+		entityTransaction.begin();
+		entityManager.remove(dbPerson);
+		entityTransaction.commit();
+	}else {
+		System.out.println("Sorry id is not present");
+	}
+}
 
 
 

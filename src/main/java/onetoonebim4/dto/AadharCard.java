@@ -46,10 +46,10 @@ public void setPerson(Person person) {
 	this.person = person;
 }
 
-@Override
-public String toString() {
-	return "AadharCard [id=" + id + ", name=" + name + ", age=" + age + ", person=" + person + "]";
-}
+//@Override
+//public String toString() {
+//	return "AadharCard [id=" + id + ", name=" + name + ", age=" + age + ", person=" + person + "]";
+//}
 
 	
 	
